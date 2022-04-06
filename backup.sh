@@ -25,8 +25,8 @@ do
 				echo
 				;;
 			-c)
-				echo "Number of files and directories in ~/backup $(ls $backupPath | wc -w)"
-				echo "Disk usage of files and directories in ~/backup $(du -b $backupPath)"
+				echo "Number of files and directories in ~/backup : $(ls $backupPath | wc -w)"
+				echo "Disk usage of files and directories in ~/backup : $(du -b $backupPath)"
 				echo
 				;;
 			--help)
