@@ -16,22 +16,20 @@ for arg in $*
 do
 	if [ $(echo $arg | cut -b-1) = "-" ]
 	then
+		echo
 		case $arg in
 
 			-l)
-				echo
 				echo "Files in ~/backup:" 
 				ls "${backupPath}"
 				echo
 				;;
 			-c)
-				echo
 				echo "Number of files and directories in ~/backup $(ls $backupPath | wc -w)"
 				echo "Disk usage of files and directories in ~/backup $(du -b $backupPath)"
 				echo
 				;;
 			--help)
-				echo
 				echo "HELP : backup copies provided files to ~/backup with options"
 				echo "Usage : "
 				echo "	backup [FILES...] [OPTIONS...]"
@@ -43,6 +41,7 @@ do
 				;;
 			*)
 				echo "$arg is an invalid arg"
+				echo
 				;;
 		esac
 	else
